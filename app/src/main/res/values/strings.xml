@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">App0704</string>
+
+    <string-array name="array_fruits">
+        <item>사과</item>
+        <item>딸기</item>
+        <item>바나나</item>
+        <item>오렌지</item>
+        <item>포도</item>
+        <item>망고</item>
+        <item>파인애플</item>
+        <item>앵두</item>
+        <item>올리브</item>
+        <item>복숭아</item>
+    </string-array>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+
+</resources>

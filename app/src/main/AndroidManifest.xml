@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.study.app0704">
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".PageActivity"
+            android:label="페이지 만들기"></activity>
+
+        <activity android:name=".ViewPagerActivity"></activity>
+
+        <activity android:name="component.activity.FruitActivity"></activity>
+        <activity android:name="component.activity.ResultActivity"></activity>
+
+
+        <activity android:name="component.service.ServiceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--서비스 등록!!-->
+        <service
+            android:name="component.service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!--브로드케스트 수신자 등록-->
+        <receiver
+            android:name="component.broadcast.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <!--수많은 방송중 원하는 방송만 골라내려면, 필터링해야 한다
+                안드로이드의 4대컴포넌트 서로 통신을 주고받기 위해 Intent를
+                사용하므로, 인텐트를 걸러내자!!
+            -->
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
